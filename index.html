@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In memoriam</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --panel: #0f0f0f;
+      --text: #f2f2f2;
+      --muted: #b8b8b8;
+      --accent: #d4d4d4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 20%, #1c1c1c 0%, var(--bg) 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      text-align: center;
+    }
+
+    main {
+      width: min(92vw, 760px);
+      padding: 2.2rem 1.5rem 2.4rem;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+      box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.06),
+        0 0 80px rgba(255, 255, 255, 0.04);
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+    }
+
+    .rest-in-peasy {
+      margin: 0 0 1rem;
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #dad1bf;
+      text-shadow:
+        0 1px 0 #8b806d,
+        0 -1px 0 #f4eedf,
+        0 2px 2px rgba(0, 0, 0, 0.5),
+        0 0 8px rgba(244, 238, 223, 0.2);
+    }
+
+    .photo-stack {
+      position: relative;
+      width: min(82vw, 380px);
+      margin: 0.5rem auto 1.1rem;
+    }
+
+    .photo-stack img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 3px solid #262626;
+      border-radius: 8px;
+      filter: grayscale(100%) contrast(105%);
+    }
+
+    .photo-base {
+      position: relative;
+      z-index: 1;
+      box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.12),
+        0 0 22px rgba(255, 255, 255, 0.1),
+        0 0 34px rgba(255, 250, 210, 0.14);
+    }
+
+    .photo-spirit {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      transform-origin: center center;
+      animation: spirit-expand 10s linear infinite;
+      pointer-events: none;
+      box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.18),
+        0 0 38px rgba(255, 255, 255, 0.14),
+        0 0 65px rgba(255, 250, 210, 0.2);
+    }
+
+    @keyframes spirit-expand {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow:
+          0 0 10px rgba(255, 255, 255, 0.12),
+          0 0 22px rgba(255, 255, 255, 0.1),
+          0 0 34px rgba(255, 250, 210, 0.14);
+      }
+      50% {
+        transform: scale(1.75);
+        opacity: 0.6;
+        box-shadow:
+          0 0 20px rgba(255, 255, 255, 0.24),
+          0 0 44px rgba(255, 255, 255, 0.2),
+          0 0 76px rgba(255, 250, 210, 0.3);
+      }
+      100% {
+        transform: scale(2.8);
+        opacity: 0;
+        box-shadow:
+          0 0 28px rgba(255, 255, 255, 0.16),
+          0 0 70px rgba(255, 255, 255, 0.1),
+          0 0 110px rgba(255, 250, 210, 0.16);
+      }
+    }
+
+    .dates {
+      margin: 0 0 1.1rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      letter-spacing: 0.03em;
+      text-transform: lowercase;
+      line-height: 1.6;
+    }
+
+    .memoriam-line {
+      display: block;
+      color: #e6e6e6;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .date-line {
+      display: block;
+    }
+
+    blockquote {
+      margin: 0;
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      color: #ffffff;
+      font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+    }
+
+    .music-toggle {
+      margin-top: 1.2rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid #3c3c3c;
+      border-radius: 6px;
+      background: #141414;
+      color: #cfcfcf;
+      font-family: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .music-toggle[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="rest-in-peasy">REQUIESCAT IN PACE</p>
+    <div class="photo-stack">
+      <img class="photo-base" src="freek.jpg" alt="portret in memoriam">
+      <img class="photo-spirit" src="freek.jpg" alt="">
+    </div>
+    <p class="dates">
+      <span class="memoriam-line">FREEK DE JONGE</span>
+      <span class="date-line">30 augustus 1944 - <span id="current-date"></span></span>
+    </p>
+    <blockquote>"Wat hebben we gelachen!"</blockquote>
+    <button id="music-toggle" class="music-toggle" hidden>start dramatic music</button>
+  </main>
+  <audio id="bg-music" autoplay loop preload="auto">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/Fr%C3%A9d%C3%A9ric_Chopin_-_Piano_Sonata_No._2%2C_Op._35_-_III._Marche_fun%C3%A8bre.ogg/Fr%C3%A9d%C3%A9ric_Chopin_-_Piano_Sonata_No._2%2C_Op._35_-_III._Marche_fun%C3%A8bre.ogg.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    const now = new Date();
+    const currentDate = now.toLocaleDateString("nl-NL", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+    document.getElementById("current-date").textContent = currentDate;
+
+    const bgMusic = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    bgMusic.volume = 0.35;
+    bgMusic.play().catch(() => {
+      musicToggle.hidden = false;
+    });
+
+    musicToggle.addEventListener("click", () => {
+      bgMusic.play();
+      musicToggle.hidden = true;
+    });
+  </script>
+</body>
+</html>
